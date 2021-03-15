@@ -1,0 +1,5 @@
+/home/user/ee6470/lab02/Gauss_fifo/build/CMakeFiles/rebuild_cache.dir
+/home/user/ee6470/lab02/Gauss_fifo/build/CMakeFiles/check.dir
+/home/user/ee6470/lab02/Gauss_fifo/build/CMakeFiles/run.dir
+/home/user/ee6470/lab02/Gauss_fifo/build/CMakeFiles/edit_cache.dir
+/home/user/ee6470/lab02/Gauss_fifo/build/CMakeFiles/gauss.dir
