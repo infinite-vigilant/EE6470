@@ -12,7 +12,7 @@ Scanning dependencies of target gauss.
 [ 20%] Building CXX object CMakeFiles/gauss.dir/testbench.cpp.o. 
 [ 40%] Linking CXX executable gauss. 
 [ 80%] Built target gauss. 
-[100%] Generating out.bmp //This is the output of the code (inside the *build* directory with name *out.bmp*). 
+[100%] Generating out.bmp // This is the output of the code (inside the *build* directory with name *out.bmp*). 
 
         SystemC 2.3.3-Accellera --- Feb 24 2021 15:14:58
         Copyright (c) 1996-2018 by all Contributors,
