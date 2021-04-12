@@ -1,0 +1,5 @@
+/home/user/ee6470/HW4/build/CMakeFiles/rebuild_cache.dir
+/home/user/ee6470/HW4/build/CMakeFiles/edit_cache.dir
+/home/user/ee6470/HW4/build/CMakeFiles/check.dir
+/home/user/ee6470/HW4/build/CMakeFiles/run.dir
+/home/user/ee6470/HW4/build/CMakeFiles/Gauss.dir

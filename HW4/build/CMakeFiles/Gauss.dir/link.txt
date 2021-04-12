@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -Wall -pedantic -D CLOCK_PERIOD=1.0  -rdynamic CMakeFiles/Gauss.dir/GaussFilter.cpp.o CMakeFiles/Gauss.dir/Initiator.cpp.o CMakeFiles/Gauss.dir/Testbench.cpp.o CMakeFiles/Gauss.dir/main.cpp.o CMakeFiles/Gauss.dir/tlm_log.cpp.o  -o Gauss  -Wl,-rpath,/opt/systemc/lib /opt/systemc/lib/libsystemc.so.2.3.3 -pthread 
