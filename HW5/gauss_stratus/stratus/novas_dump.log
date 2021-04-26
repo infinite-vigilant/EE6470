@@ -1,0 +1,212 @@
+ncsim(64) 15.20-s039
+Linux 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64
+CPU cores: 8
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		unlimited
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked	64 kbytes
+maxproc			4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+_=*6750*/usr/cad/cadence/INCISIV/cur/tools/bin/irun
+ARITH_HOME=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/cellmath
+ASSURAHOME=/usr/cad/cadence/ASSURA/cur
+BDW_AR=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/gcc/4.8/bin/ar rc
+BDW_CC=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/gcc/4.8/bin/g++
+BDW_CCDEP=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/gcc/4.8/bin/g++
+BDW_CCOPTIONS=-DCLOCK_PERIOD=10.0 -g 
+BDW_COV_LIB_FLAGS=
+BDW_COWARE=0
+BDW_COWARE_LOAD_FLAGS=
+BDW_COWARE_PREPROC_FLAGS=
+BDW_CYNTH_CONFIG=
+BDW_CYNTH_CONFIG_DIR=
+BDW_ESC_LIB=bdw_work/libesc/libesc.a
+BDW_EXEC_CMD=
+BDW_EXTRA_CCFLAGS=
+BDW_EXTRA_LDFLAGS=
+BDW_EXTRA_LIBS=
+BDW_EXTRA_LIB_FLAGS=
+BDW_FSDBVCSPLATFORM=LINUX64
+BDW_GENDEPS=1
+BDW_HLSLIB_DIRS=
+BDW_HLSLIB_NAMES=
+BDW_HLS_CONFIG=
+BDW_HLS_CONFIG_DIR=
+BDW_HUB_ARGV=../lena_std_short.bmp out.bmp
+BDW_LIBDIR=bdw_work/libs
+BDW_LINK=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/gcc/4.8/bin/g++
+BDW_LS_CONFIG=
+BDW_LS_CONFIG_DIR=
+BDW_LS_CONFIG_LOGS=
+BDW_LS_INFO=
+BDW_MODULE=
+BDW_MODULEDIR=bdw_work/modules
+BDW_NCSC=0
+BDW_OBJDIR=bdw_work/objs
+BDW_PMAKE_FLG=
+BDW_PROJECT_FILE=project.tcl
+BDW_SCSIM_ARGS=
+BDW_SIMDIR=bdw_work/sims
+BDW_SIM_CONFIG=V_BASIC
+BDW_SIM_CONFIG_DIR=bdw_work/sims/V_BASIC
+BDW_SYSTEMC_VERSION=2.3.1
+BDW_TCL_DIR=/usr/cadtool/cadence/STRATUS/cur/share/stratus/tcl
+BDW_TECH_LIBS=/usr/cadtool/cadence/STRATUS/cur/share/stratus/techlibs/GPDK045/gsclib045_svt_v4.4/gsclib045/timing/slow_vdd1v2_basicCells.lib
+BDW_USECYNTH=1
+BDW_USEHUB=1
+BDW_USE_ESCLIB=1
+BDW_USE_SCV=0
+BDW_VERILOG_DIALECT=1995
+BDW_VISTA=0
+BDW_VLOGCOMP_ARGS=
+BDW_VLOGSIM_ARGS=
+BDW_VLOG_DEFINES=+define+ioConfig +define+BDW_RTL_SobelFilter_BASIC
+BDW_VLOG_DUT_FILES= bdw_work/wrappers/SobelFilter_cosim.v bdw_work/modules/SobelFilter/BASIC/SobelFilter_rtl.v 
+BDW_VLOG_LIBS=-y bdw_work/modules/SobelFilter/BASIC/v_rtl
+BDW_VRTL_FILE=
+BDW_WORKLIB=bdw_work
+BDW_WRAPDIR=bdw_work/wrappers
+BDW_WRITEFSDB=0
+BDW_XMSC=0
+CALIBRE_HOME=/usr/cad/mentor/calibre/cur
+CDNS_QTDIR=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/Qt/64bit
+CDS_AUTO_64BIT=NONE
+CDS_LANG=en_US.UTF-8
+CDS_Netlisting_Mode=Analog
+CDS_SET_LOCALE=C
+CM_USERLOGDIR=/home/course/ee647001/EE6470/sobel_stratus/stratus/bdw_work/tmp
+CM_USERTMPDIR=/home/course/ee647001/EE6470/sobel_stratus/stratus/bdw_work/tmp
+CWBExec=1
+DESIGNWARE_HOME=/usr/cadtool/cad/synopsys/dw_home/cur
+EDITOR=/usr/bin/vim
+ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
+FINESIM_64=1
+FINESIM_HOME=/usr/cad/synopsys/finesim/cur
+FINEWAVE_64=1
+GROUP=course
+HOME=/home/course/ee647001
+HOST=ws32
+HOSTNAME=ws32
+HOSTTYPE=x86_64-linux
+HOY_LIC_FILE=4141@lscic2.cic.org.tw
+KDEDIRS=/usr
+LANG=C
+LC_ALL=C
+LC_HOME=/usr/cadtool/cad/synopsys/synthesis/lc/cur
+LD_LIBRARY_PATH=:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/lib/64bit:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/lib:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib/64bit:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/TPtools/boost/lib/64bit:/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/synopsys/finesim/cur/libRH4/Linux32/:/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64/:/usr/cadtool/cadence/STRATUS/cur/tools/lib:/usr/cad/cadence/INNOVUS/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib/64bit:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/cadence/IC/cur/tools/lib:/usr/cad/cadence/IC/IC_06.17.709/tools/lib:/usr/cad/cadence/ETS/cur/tools/lib:/usr/cad/cadence/CTOS/cur/tools/lib:/usr/cadtool/cadence/CONFRML/cur/tools/lib:/usr/cad/cadence/ASSURA/cur/tools/assura/lib:/usr/cad/cadence/ASSURA/cur/tools/dsm/lib:/usr/cad/cadence/ASSURA/cur/tools/lib:/usr/openwin/lib:/usr/dt/lib:/usr/lib:/usr/local/lib:bdw_work/sims
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LISAHOME=/usr/cad/synopsys/processor_designer/cur/PD/linux
+LM_LICENSE_FILE=1717@lsntu:26585@lsnctu:5280@lscic:5280@lsncku:5280@lsnchu:26585@lsncku:5219@lsntu:5280@lsnctu:
+LOGNAME=ee647001
+Laker_TCL_L3=1
+Laker_TCL_ToolBox=1
+MACHTYPE=x86_64
+MAIL=/var/spool/mail/ee647001
+MAKEFLAGS= --no-print-directory -- CWBExec=1 BDW_SIM_CONFIG=V_BASIC
+MAKELEVEL=4
+MAKEOVERRIDES=${-*-command-variables-*-}
+MANPATH=/usr/cad/synopsys/nanosim/cur/doc/ns/man:/usr/cadtool/cad/synopsys/coreconsultant/cur/doc/dware/man:/usr/cad/synopsys/synthesis/cur/doc/syn/man:/usr/spw/CDS/tools/man:/usr/spw/caesys/lmgr/man
+MFLAGS=- --no-print-directory
+MGC_HOME=/usr/cad/mentor/modelsim/cur
+MGC_LOCATION_MAP=NO_MAP
+MGC_TMPDIR=/tmp
+MTI_VCO_MODE=64
+OAHOME=/usr/cad/cadence/ETS/cur/oa
+OA_HOME=/usr/cad/cadence/EDI/cur/oa
+OSTYPE=linux
+PATH=/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/usr/cadtool/cadence/STRATUS/cur/bin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/bin/64bit:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/bin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/bin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/cellmath/bin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/gdb/bin:/tools/linux/cadence/STRATUS/cur/bin:/usr/lib64/qt-3.3/bin:/home/course/ee647001/perl5/bin:/usr/bin/:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cadtool/silvaco/bin:/usr/cadtool/jeroo/Jeroo.jar/:/usr/cadtool/mentor/tessent/cur/bin:/usr/cad/synopsys/sold/cur:/usr/cad/synopsys/processor_designer/cur/PD/linux/bin:/usr/cadtool/matlab/bin:/usr/cadtool/git/bin:/usr/cad/synopsys/finesim/cur/bin:/usr/cadtool/eclipse_2012/eclipse/:/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/cad/synopsys/vcs-mx/cur/bin:/usr/cad/synopsys/vcs-mx/cur/linux/bin:/usr/cad/synopsys/vcs-mx/cur/linux/util:/usr/cad/synopsys/vcs-mx/cur/linux/flexlm:/usr/cad/synopsys/vcs/cur/bin:/usr/cad/synopsys/vcs/cur/linux/bin:/usr/cad/synopsys/vcs/cur/linux/util:/usr/cad/synopsys/vcs/cur/linux/flexlm:/usr/cad/synopsys/tmax/cur/bin:/usr/bin/X11:/usr/cad/synopsys/coreconsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cadtool/cad/synopsys/spyglass/cur/SPYGLASS_HOME/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/primerail/cur/amd64/syn/bin:/usr/cad/synopsys/nanosim/cur/bin:/usr/cad/synopsys/nanosim/cur/linux/ns/bin:/usr/cad/synopsys/milkyway/cur/bin/AMD.64:/usr/cadtool/cad/synopsys/laker/cur/bin:/usr/cad/synopsys/icc2/cur/bin:/usr/cad/synopsys/icc/vH-2013.03-SP1/amd64/syn/bin:/usr/cad/synopsys/hsimplus/cur/hsimplus/bin:/usr/cad/synopsys/hercules/cur/bin/AMD.64:/usr/cad/synopsys/customexplorer/cur/bin:/usr/bin/X11:/usr/cadtool/cad/synopsys/coreconsultant/cur/bin:/usr/cad/mentor/Questa_Sim/cur/questasim/bin:/usr/cad/mentor/modelsim/cur/bin:/usr/cad/mentor/calibre/cur/bin:/usr/mentor/calibre/aoi_cal_2017.4_19.14/bin:/usr/cadtool/BRAINS/cur/bin:/usr/cadtool/cadence/STRATUS/cur/tools/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/INNOVUS/cur/tools/celtic/bin:/usr/cad/cadence/INNOVUS/cur/tools/plato/bin:/usr/cad/cadence/INNOVUS/cur/tools/dfII/bin:/usr/cad/cadence/INNOVUS/cur/tools/bin:/usr/cad/cadence/INNOVUS/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/cadence/IC/cur/tools/dfII/bin:/usr/cadence/IC/cur/tools/dracula/bin:/usr/cadence/IC/cur/tools/bin:/usr/cad/cadence/IC/IC_06.17.709/tools/dfII/bin:/usr/cad/cadence/IC/IC_06.17.709/tools/dracula/bin:/usr/cad/cadence/IC/IC_06.17.709/tools/bin:/usr/cad/cadence/ETS/cur/tools/bin:/usr/cad/cadence/CTOS/cur/tools/bin:/usr/cadtool/cadence/CONFRML/cur/./bin:/usr/cadtool/cadence/CONFRML/cur/tools/bin:/usr/cad/cadence/ASSURA/cur/tools/assura/bin:/usr/cad/cadence/ASSURA/cur/tools/dsm/bin:/usr/cad/cadence/ASSURA/cur/tools/bin:/usr/cad/cadence/ASSURA/cur/tools/dfII/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/linux/syn/bin:/usr/local/bin:/usr/bin:/usr/cadtool/cad/synopsys/synthesis/lc/cur/bin:/usr/cadtool/cad/synopsys/synthesis/lc/cur/admin/install/lc/bin/:/usr/cadtool/cad/synopsys/dw_home/cur/bin:/usr/cadtool/Acrobat5/bin:/usr/local/sbin:/usr/sbin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/genus/bin:/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/genus/bin
+PERL5LIB=/home/course/ee647001/perl5/lib/perl5
+PERL_HOMEDIR=1
+PERL_LOCAL_LIB_ROOT=/home/course/ee647001/perl5
+PERL_MB_OPT=--install_base /home/course/ee647001/perl5
+PERL_MM_OPT=INSTALL_BASE=/home/course/ee647001/perl5
+POWERVIEW_64=1
+PRIMERAIL=/usr/cad/synopsys/primerail/cur
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+PWD=/home/course/ee647001/EE6470/sobel_stratus/stratus
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+QTLIB=/usr/lib64/qt-3.3/lib
+QT_GRAPHICSSYSTEM_CHECKED=1
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+REMOTEHOST=bigbird
+SFLM_SERVER=ws43
+SG_HTML_BROWSER=/usr/bin/mozilla
+SHELL=/usr/bin/tcsh
+SHLIB_PATH=/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64
+SHLVL=9
+SNPS_SIMIF=/usr/cad/synopsys/nanosim/cur
+SOFT_MAN_DIR=/usr/cadtool/cad/synopsys/coreconsultant/cur/doc/dware/man
+SPW_HOME=/usr/spw
+SPW_SYS_DB=/usr/spw
+SSH_CLIENT=140.114.24.33 57586 22
+SSH_CONNECTION=140.114.24.33 57586 140.114.24.92 22
+SSH_TTY=/dev/pts/16
+STRATUS_HOME=/usr/cadtool/cadence/STRATUS/cur
+STRATUS_PLATFORM=lnx86
+SYNOPSYS=/usr/cad/synopsys/icc/vH-2013.03-SP1
+SYNOPSYS_TMAX=/usr/cad/synopsys/tmax/cur
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+SYSTEMC=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/systemc/2.3.1
+TERM=xterm
+USER=ee647001
+VCS_CC=gcc
+VCS_HOME=/usr/cad/synopsys/vcs-mx/cur
+VENDOR=unknown
+VERPLEX_HOME=/usr/cadtool/cadence/CONFRML/cur
+W3264_ENV=/home/course/ee647001/.kshrc
+XDG_RUNTIME_DIR=/run/user/12713
+XDG_SESSION_ID=26378
+XLOCALEDIR=/usr/cad/synopsys/icc2/cur/etc/locale
+A__z="*SHLVL
+_IRUNROOT_=/usr/cad/cadence/INCISIV/cur/tools
+CDS_ARCH=lnx86
+NCRUNMODE=irun:bdw_work/sims/V_BASIC/irun.lnx8664.15.20.nc
+IRUNBATCH=FALSE
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/cad/cadence/INCISIV/cur/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=irun
+argv[1]=+nc64bit
+argv[2]=+incdir+/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib
+argv[3]=+incdir+bdw_work/wrappers
+argv[4]=+access+rw
+argv[5]=+loadpli1=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib/64bit/ncvlog_ssl:ssl_bootstrap
+argv[6]=+ncinput+bdw_work/sims/V_BASIC/ncverilog.do
+argv[7]=+nclibdirname+bdw_work/sims/V_BASIC
+argv[8]=-f
+argv[9]=bdw_work/sims/V_BASIC/siminfo
+argv[10]=bdw_work/sims/top_V_BASIC.v
+argv[11]=bdw_work/wrappers/SobelFilter_cosim.v
+argv[12]=bdw_work/modules/SobelFilter/BASIC/SobelFilter_rtl.v
+argv[13]=bdw_work/modules/SobelFilter/BASIC/v_rtl/SobelFilter_ROM_18X32_mask.v
+argv[14]=+libext+.v
+argv[15]=+define+ioConfig
+argv[16]=+define+BDW_RTL_SobelFilter_BASIC
+argv[17]=+nowarn+LIBNOU
+argv[18]=+hubSetOption+libdef=bdw_work/sims/V_BASIC/sim_V_BASIC.so,argv=../lena_std_short.bmp%out.bmp
+argv[19]=+hubSetOption+bdr=bdw_work/sims/V_BASIC/sim.bdr
+argv[20]=-l
+argv[21]=bdw_work/sims/V_BASIC/bdw_sim_verilog.log
+201 profile - 100
+          CPU/Mem usage: 0.100 sys,  0.040 user,  168.80M sys,  0.00M vm
+202 VC callback profile - scalar:0 vector:0
+203 Mon Apr 26 19:41:02 2021
+204 pliAppInit
+205 FSDB_GATE is disabled.
+206 Enable Parallel Dumping.
+207 pliAppMiscSet: New Sim Round
+208 pliEntryInit
+209 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+210 Sim process exit

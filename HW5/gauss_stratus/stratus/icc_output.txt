@@ -1,0 +1,6 @@
+icc_shell> icc
+Error: unknown command 'icc' (CMD-005)
+icc_shell> exit
+
+Thank you...
+
