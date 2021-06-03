@@ -54,14 +54,13 @@ int main() {
 	unsigned int length = ReadfromByteArray(source_array, 22);
 	unsigned int bytes_per_pixel = ReadfromByteArray(source_array, 28) / 8;
 	unsigned char* source_bitmap = &source_array[input_rgb_raw_data_offset];
-  printf("======================================\n");
   printf("\t  Reading from array\n");
-  printf("======================================\n");
+
 	printf(" input_rgb_raw_data_offset\t= %d\n", input_rgb_raw_data_offset);
 	printf(" width\t\t\t\t= %d\n", width);
 	printf(" length\t\t\t\t= %d\n", length);
 	printf(" bytes_per_pixel\t\t= %d\n",bytes_per_pixel);
-  printf("======================================\n");
+
 
   unsigned char  buffer[4] = {0};
   for(int i = 0; i < width; i++){
@@ -84,14 +83,7 @@ int main() {
         }
       }
       read_data_from_ACC(GAUSSFILTER_READ_ADDR, buffer, 4);
-
-//       printf("gen  r: %d, g: %d, b: %d\n", *(buffer+2), *(buffer+1), *(buffer+0));
-      // printf("[%d - %d] >>> %d \n",i ,j ,*(buffer + 0) );
-      // if(*(buffer + 0) > 90){
-      //   printf("%d,", 255 );
-      // }else{
-      //   printf("%d,", 0 );        
-      // }
+}
     }
   }
 }
