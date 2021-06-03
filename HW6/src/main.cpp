@@ -1,9 +1,6 @@
 #include <string.h>
 #include "stdio.h"
 
-// Gauss Filter ACC
-static char* const GAUSSFILTER_START_ADDR = reinterpret_cast<char* const>(0x75000000);
-static char* const GAUSSFILTER_READ_ADDR  = reinterpret_cast<char* const>(0x75000004);
 
 // DMA 
 static volatile uint32_t * const DMA_SRC_ADDR  = (uint32_t * const)0x70000000;
@@ -12,6 +9,10 @@ static volatile uint32_t * const DMA_LEN_ADDR  = (uint32_t * const)0x70000008;
 static volatile uint32_t * const DMA_OP_ADDR   = (uint32_t * const)0x7000000C;
 static volatile uint32_t * const DMA_STAT_ADDR = (uint32_t * const)0x70000010;
 static const uint32_t DMA_OP_MEMCPY = 1;
+
+// Gauss Filter 
+static char* const GAUSSFILTER_START_ADDR = reinterpret_cast<char* const>(0x75000000);
+static char* const GAUSSFILTER_READ_ADDR  = reinterpret_cast<char* const>(0x75000004);
 
 bool _is_using_dma = false;
 
@@ -28,19 +29,16 @@ void write_data_to_ACC(char* ADDR, unsigned char* buffer, int len){
     *DMA_LEN_ADDR = len;
     *DMA_OP_ADDR  = DMA_OP_MEMCPY;
   }else{
-    // Directly Send
     memcpy(ADDR, buffer, sizeof(unsigned char)*len);
   }
 }
 void read_data_from_ACC(char* ADDR, unsigned char* buffer, int len){
   if(_is_using_dma){
-    // Using DMA 
     *DMA_SRC_ADDR = (uint32_t)(ADDR);
     *DMA_DST_ADDR = (uint32_t)(buffer);
     *DMA_LEN_ADDR = len;
     *DMA_OP_ADDR  = DMA_OP_MEMCPY;
   }else{
-    // Directly Read
     memcpy(buffer, ADDR, sizeof(unsigned char)*len);
   }
 }
@@ -79,7 +77,6 @@ int main() {
             buffer[3] = 0;
           }
           write_data_to_ACC(GAUSSFILTER_START_ADDR, buffer, 4);
-//           printf("send r: %d, g: %d, b: %d\n", *(buffer+2), *(buffer+1), *(buffer+0));
         }
       }
       read_data_from_ACC(GAUSSFILTER_READ_ADDR, buffer, 4);
