@@ -139,7 +139,7 @@ The design is exactly same as HW1.
 ### FIFO 
 |original input | blurred output|
 |---------------|---------------|
-|![i](lena_std_short.bmp)|![o](out.bmp)|
+|![i](lena.bmp)|![o](out.bmp)|
 
 ### Buffer
 ```sh
