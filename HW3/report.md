@@ -56,7 +56,7 @@ void GaussFilter::blocking_transport(tlm::tlm_generic_payload &payload,
 ```
 
 ## III. Design Model
-The design is exactly same as HW1. 
+
 ![design](hw3.png)
 
 
