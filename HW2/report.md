@@ -1,4 +1,4 @@
-# Homework - 1 : gaussian filter FIFO anf buffer
+# Homework - 2 : gaussian filter FIFO and buffer
 
 ## I. Introduction
 In this homework we are told to implement a gaussian filter module with SystemC FIFO channels. We also have to use a buffer to send in batch a row or a column of image pixels from testbench to the filter. We were provided with a resource talking about different kinds of filters. Here we are dealing with a gaussian blur filter which is the result of blurring an image by a gaussian function (named after mathematician and scientist Carl Friedrich Gauss). The gauss function can be formulated as follows : 
