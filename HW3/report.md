@@ -22,7 +22,9 @@ double bias = 0.0;
 
 ## II. Implementation details
 
-In this part I implemented the TLM 2.0 transation with a gaussian blur filter in SystemC using the codes provided by the TAs. There is an initiator and target socket created between the testbench and the GaussFilter module, where the filter module is a TLM targetThe gaussian function is described here : 
+In this part I implemented the TLM 2.0 transation with a gaussian blur filter in SystemC using the codes provided by the TAs. There is an initiator and target socket created between the testbench and the GaussFilter module, where the filter module is a TLM target. The TLM interface has been created as follow :
+
+> NOTE: These are some code snippets and not the entire code
 
 ```c++
 GaussFilter::GaussFilter(sc_module_name n)
@@ -62,7 +64,7 @@ void GaussFilter::blocking_transport(tlm::tlm_generic_payload &payload,
 
 
 ## IV. Experimental results
-### FIFO 
+
 |original input | blurred output|
 |---------------|---------------|
 |![i](lena_std_short.bmp)|![o](out.bmp)|
