@@ -15,41 +15,50 @@ void gaussfilter::do_filter() {
   while (true) {
       
 
-    //glm::vec3 color = glm::vec3(0.0f);
-    double allWeights = 0.0;
-    double r=0.0;
-    double g = 0.0;
-    double b = 0.0;
-    for (unsigned int v = 0; v < MASK_Y; ++v) {
-      for (unsigned int u = 0; u < MASK_X; ++u) {
-          
+    w = i_width.read();
+    h = i_height.read();
 
-          double R = i_r.read();
-          double G = i_g.read();
-          double B = i_b.read();
-          
-          wait();
-          
-          r += R * mask[u][v];
-          g += G * mask[u][v];
-          b += B * mask[u][v];
-          wait();
-          
-          allWeights += mask[u][v];
-          
-          wait();
-      }
+    int r[3][w];
+    int g[3][w];
+    int b[3][w];
+    int cnt;
+    for(y = 0 ; y < h ; y++) {    
+        if(y < h - 1){
+            for(cnt = 0 ;c < w ; c++) { //reading
+                r[2][cnt] = i_r.read();
+                g[2][cnt] = i_g.read();
+                b[2][cnt] = i_b.read();
+            }
+        }
+        
+        for(x = 0 ; x < w; x++){
+            R = G = B = 0;
+            for (i = -1 ; i < filterHeight - 1 ; i++) {
+                for (j = -1 ; j < filterWidth - 1 ; j++) {
+                    if(0<=y+i && y+i<height && 0<=x+j && x+j<width){
+                        R += r[i+1][x+j+1] * filter[i+1][j+1];
+                        G += g[i+1][x+j+1] * filter[i+1][j+1];
+                        B += b[i+1][x+j+1] * filter[i+1][j+1];
+                    }
+                }
+            }
+            o_r.write(R);
+            o_g.write(G);
+            o_b.write(B);
+            
+        }
+        //shifting
+        for(i = 0 ;i < w ; i++) { 
+            r[0][i] = r[1][i];
+            g[0][i] = g[1][i];
+            b[0][i] = b[1][i];
+            r[1][i] = r[2][i];
+            g[1][i] = g[2][i];
+            b[1][i] = b[2][i];
+            r[2][i] = g[2][i] = b[2][i] = 0;
+        }
+        
     }
-    
-    
-    double result = allWeights;
-    double result_r = r/result;
-    o_result_r.write(result_r);
-    double result_g =  g/result;
-    o_result_g.write(result_g);
-    double result_b = b/result;
-    o_result_b.write(result_b);
 }
-  }
 
 
