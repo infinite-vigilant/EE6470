@@ -108,9 +108,9 @@ In this part I implemented the gaussian blur in SystemC using a buffer. First we
                     }
                 }
             }
-            o_r.write(R);
-            o_g.write(G);
-            o_b.write(B);
+            result_r.write(R);
+            result_g.write(G);
+            result_b.write(B);
             
         }
         //shifting
