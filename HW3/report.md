@@ -43,9 +43,9 @@ void GaussFilter::blocking_transport(tlm::tlm_generic_payload &payload,
   case tlm::TLM_READ_COMMAND:
     switch (addr) {
     case GAUSS_FILTER_RESULT_ADDR:
-      r = o_r.read();
-      g = o_g.read();
-      b = o_b.read();
+      r = result_r.read();
+      g = result_g.read();
+      b = result_b.read();
       break;
     }
     data_ptr[0] = r;
