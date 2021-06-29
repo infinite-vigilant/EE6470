@@ -2,7 +2,8 @@
 
 ## I. Introduction
 In this homework we are told to implement a gaussian filter in SystemC and C++. We were provided with a resource talking about different kinds of filters. Here we are dealing with a gaussian blur filter which is the result of blurring an image by a gaussian function (named after mathematician and scientist Carl Friedrich Gauss). The gauss function can be formulated as follows : 
-> ![G(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^-\frac{x^{2}}{2\sigma^2}](https://latex.codecogs.com/svg.latex?G(x)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}e^-\frac{x^{2}}{2\sigma^2})
+>[1 / (2.pi.(sigma)^2)]e^-(x^2 / 2.(sigma)^2)]
+
 
 It is a widely used effect in graphics software, typically to reduce image noise and reduce detail. The kernel I used is described here: 
 
