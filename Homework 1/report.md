@@ -121,10 +121,9 @@ void Testbench::do_gauss(){
 
 
 ## IV. Experimental results
-- original input : 
-  ![i](lena.bmp)
-- blurred output:
-  ![o](out.bmp)
+|original input | blurred output|
+|---------------|---------------|
+|![i](lena_std_short.bmp)|![o](out.bmp)|
 
 ## V. Discussion and Conclusion
 In this homework I learnt a lot about the gaussian blur filter. Starting with the c++ code to the SystemC code, TAs sample code has been very helpful. The most basic difference I felt was the sending of 3 results, i,e, result_r, result_g, result__b and not just one (unlike soble) from the gaussfilter.cpp file to the testbench.cpp file for file outpu/image dump.  
