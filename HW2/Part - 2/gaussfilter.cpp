@@ -42,9 +42,9 @@ void gaussfilter::do_filter() {
                     }
                 }
             }
-            o_r.write(R);
-            o_g.write(G);
-            o_b.write(B);
+            result_r.write(R);
+            result_g.write(G);
+            result_b.write(B);
             
         }
         //shifting
