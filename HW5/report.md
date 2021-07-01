@@ -1,6 +1,6 @@
 
 
-# Homework - 4 : gaussian filter with Stratus HLS
+# Homework - 5 : gaussian filter with Stratus HLS
 
 ## I. Introduction
 In this homework we are told to synthesize the kernel function of the Gaussian blur and annotate the timing back to the platform from previous homework using Stratus HLS. Stratus High level Design automates the design and verification flow of hundreds of blocks from transaction-level models (TLMs) to gates. Here we are dealing with a gaussian blur filter which is the result of blurring an image by a gaussian function (named after mathematician and scientist Carl Friedrich Gauss). The gauss function can be formulated as follows : 
