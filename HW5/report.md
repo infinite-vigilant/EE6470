@@ -36,15 +36,15 @@ for (unsigned int v = 0; v < MASK_Y; ++v) {
 #ifndef NATIVE_SYSTEMC
 				{
 					HLS_DEFINE_PROTOCOL("input");
-					r = i_r.get();
-					g = i_g.get();
-					b = i_b.get();
+					r = input_r.get();
+					g = input_g.get();
+					b = input_b.get();
 					wait();
 				}
 #else
-				r = i_r.read();
-				g = i_g.read();
-				b = i_b.read();
+				r = input_r.read();
+				g = input_g.read();
+				b = input_b.read();
 #endif
 				{
 					HLS_CONSTRAIN_LATENCY(0, 2, "lat01");
@@ -95,7 +95,7 @@ for (unsigned int v = 0; v < MASK_Y; ++v) {
 |---------------|---------------|
 |![i](lena_std_short.bmp)|![o](out.bmp)|
 
-### Splitted
+### 1. Splitted
 
 #### Area
 
@@ -104,7 +104,7 @@ for (unsigned int v = 0; v < MASK_Y; ++v) {
 | 2352.1 | 2108.2 | 
 
 
-### non-splitted
+### 2. Non-Splitted
 
 #### Area
 
