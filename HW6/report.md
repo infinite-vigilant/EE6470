@@ -207,5 +207,5 @@ num-instr = 94200746
 
 
 ## V. Discussion and Conclusion
-In this homework I learnt the use of stratus high level sysnthesis. We experiment with diffrent kinds of simulations like sim_B, sim_V_BASIC and sim_V_DPA. The TAs sample code has been very helpful in writing the stratus codes. This was the first time we did Hardware level synthesis which was quite helpful.  
+In this homework I learnt to port gaussian filter with risc V virtual platform. The "basic-acc" codes provided by TAs has been very helpful, since its hard and complicated to bulit it from scratch. There were a lot of commands which I found hard to understand like the exact use of DMA module, but while writing code for gaussfilter, much of these concepts were cleared. 
 
