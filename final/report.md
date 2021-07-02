@@ -20,7 +20,7 @@ inference accelerators using RISC V ISA.
 ## II. Implementation details
 ### 1. Implementation steps 
 
-In this part we describe the basic structure of a DPD model which will be imlemented in our project. 
+In this part we describe the basic structure of a DPD model which will be implemented in our project. 
 
 |Step - 1 | Step - 2|Step - 3|
 |---------------|---------------|----------------|
@@ -125,19 +125,75 @@ void lstm::do_filter(){
 For hardware/software co-realtion we port the DPD model created in SystemC with a RISC V virtual platform using "basic-acc". The sodtware and hardware code written in the VP communicate through DMA. The sample code is mention here : 
 
 ```c++
+static char* const lstm_START_ADDR = reinterpret_cast<char* const>(0x77000000);
+static char* const lstm_START1_ADDR = reinterpret_cast<char* const>(0x77000036);
+static char* const lstm_READ_ADDR  = reinterpret_cast<char* const>(0x77000070);
+static char* const lstm_READ1_ADDR = reinterpret_cast<char* const>(0x7700000120);
 
+ for(int i = 0; i < 2000; i++){
+            buffer_r = input_r[i];
+            buffer_i = input_i[i];
+         
+          write_data_to_ACC(lstm_START_ADDR, buffer_r, 4);
+          write_data_to_ACC(lstm_START1_ADDR, buffer_i, 4);
+        
+      
+      read_data_from_ACC(lstm_READ_ADDR, buffer_r, 4);
+      read_data_from_ACC(lstm_READ1_ADDR, buffer_i, 4);
+```
+
+### RISC V multicore implementation 
+
+In this part we use multiple RISC V processors (2) for parallel simulation. Since there are total 100 hidden layers, in the first core first 50 are computed and next 50 in the other core. The code for muti-core implementation is described below: 
+
+```c++
+#define PROCESSORS 2
+int main(unsigned hart_id) {
+	if (hart_id == 0) {
+		sem_init(&barrier_lock, 1);
+		sem_init(&barrier_sem, 0); //lock all cores initially
+		for(int i=0; i< PROCESSORS; ++i){
+			sem_init(&print_sem[i], 0); //lock printing initially
+		}
+		sem_init(&lock, 1);
+	
+	   
+	  sem_wait(&lock);
+	  if (hart_id == 0) write_data_to_ACC(GAUSSIANFILTER_START_ADDR, buffer, 4);
+	  else write_data_to_ACC(GAUSSIANFILTER_START_1_ADDR, buffer, 4);
+	  sem_post(&lock);
+}
 ```
 
 ## III. Design Model
-![design](hw1.png)
+The stratus HLS Model is describe here: 
+
+![design](12.png)
 
 
 
 ## IV. Experimental results
-|original input | blurred output|
+
+- Stratus 
+![o](41.png)
+- RISC V 
+![o](4.png)
+- RISC V Multicore
+|Core - 0| Core - 1|
 |---------------|---------------|
-|![i](lena_std_short.bmp)|![o](out.bmp)|
+|![i](31.png)|![o](32.png)|
+
+- Comparitive Study 
+
+| |Simulated Time|
+|---------------|---------------|
+|Single - Core| 229953920 ns|
+|Multi - Core (2 cores) |27873540 ns|
+|Software implementation |1131425656 ns|
+|RISC V implementation |27873540 ns|
 
 ## V. Discussion and Conclusion
-In this homework I learnt a lot about the gaussian blur filter. Starting with the c++ code to the SystemC code, TAs sample code has been very helpful. The most basic difference I felt was the sending of 3 results, i,e, result_r, result_g, result__b and not just one (unlike soble) from the gaussfilter.cpp file to the testbench.cpp file for file outpu/image dump.  
+In this project we implemented a neural network based digital pre-distortion model is SystemC. For hardware level systhesis we pushed this code to Stratus HLS. And finally for hw/sw co-design we implemented the entire architecture in RISC V VP in single as well as multi-core. This project helped us a lot to apply all the knowledge we learnt in this course. 
+
+Thank you. :)
 
