@@ -181,8 +181,8 @@ The stratus HLS Model is describe here:
 ![o](4.png)
 
 - RISC V Multicore
-
-|![i](31.png)|![o](32.png)|
+![i](31.png)
+![o](32.png)
 
 - Comparitive Study 
 
