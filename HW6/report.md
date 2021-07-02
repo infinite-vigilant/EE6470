@@ -32,7 +32,7 @@ We are givena RISC V docker image which contains the source code for a sobel fil
 Now I will show the things which are added in our case of gauss filter. First I will go through the Platform and then the src.
 
 - Platform 
-Inside the platform we gave the gaussfilter.cpp file which is the main software link. The code which is added on top of soble filter is mentioned here: 
+Inside the platform we have the gaussfilter.h file and the main file which is the main software link. The code which is added on top of soble filter is mentioned here: 
  > NOTE: This is just some snaps from the code and not the complete code. 
 
 ```c++
