@@ -104,7 +104,7 @@ HLS_CONSTRAIN_LATENCY(0, 2, "lat01");
 
 ## IV. Experimental results
 
-|original input | blurred output|
+|original input | sharpen output|
 |---------------|---------------|
 |![i](lena_std_short.bmp)|![o](out.png)|
 
