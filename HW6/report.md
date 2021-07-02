@@ -108,7 +108,102 @@ int main() {
 
 ## IV. Experimental results
 
+### 1. We will first build the "basic-acc" platform of riscv-vp and run the vp as follow : 
 
+```sh
+$ cd build
+$ cmake ..
+$ make install
+-----------------------------------------------------------
+user@ubuntu:~/ee6470/riscv-vp/vp/build$ make install
+[  8%] Built target core-common
+[ 17%] Built target gdb
+[ 25%] Built target gdb-mc
+[ 29%] Built target rv32
+[ 34%] Built target rv64
+[ 44%] Built target platform-common
+[ 49%] Built target platform-basic
+[ 52%] Built target riscv-vp
+[ 56%] Built target platform-basic-acc
+[ 59%] Built target riscv-vp-acc
+[ 74%] Built target hifive-vp
+[ 77%] Built target tiny32-vp
+[ 80%] Built target tiny32-mc
+[ 85%] Built target platform-tiny32-mc
+[ 88%] Built target tiny64-vp
+[ 91%] Built target tiny64-mc
+[ 94%] Built target test32-vp
+[ 97%] Built target linux-vp
+[100%] Built target linux32-vp
+Install the project...
+-- Install configuration: "Debug"
+
+```
+### 2. Next we will run the basic gaussian filter software (sw) as follow 
+
+```sh
+$ cd $EE6470
+$ cd riscv-vp/sw
+$ cd gauss
+$ make
+$ make sim
+--------------------------------------------------------------
+user@ubuntu:~/ee6470/riscv-vp/sw/gauss$ make sim
+riscv32-unknown-elf-g++ -std=c++14 main.cpp -o main -march=rv32ima -mabi=ilp32
+~/ee6470/riscv-vp/vp/build/bin/riscv-vp-acc --intercept-syscalls main
+
+        SystemC 2.3.3-Accellera --- Jun 17 2021 16:50:52
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+======================================
+	  Reading from array
+======================================
+ input_rgb_raw_data_offset	= 54
+ width				= 256
+ length				= 256
+ bytes_per_pixel		= 3
+======================================
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+=[ core : 0 ]===========================
+simulation time: 3494287520 ns
+zero (x0) =        0
+ra   (x1) =    10696
+sp   (x2) =  1ffffec
+gp   (x3) =    508f0
+tp   (x4) =        0
+t0   (x5) =       20
+t1   (x6) =    30000
+t2   (x7) =        1
+s0/fp(x8) =        0
+s1   (x9) =        0
+a0  (x10) =        0
+a1  (x11) =        0
+a2  (x12) =      4c1
+a3  (x13) =        0
+a4  (x14) =        0
+a5  (x15) =        0
+a6  (x16) =        1
+a7  (x17) =       5d
+s2  (x18) =        0
+s3  (x19) =        0
+s4  (x20) =        0
+s5  (x21) =        0
+s6  (x22) =        0
+s7  (x23) =        0
+s8  (x24) =        0
+s9  (x25) =        0
+s10 (x26) =        0
+s11 (x27) =        0
+t3  (x28) =        3
+t4  (x29) =        2
+t5  (x30) =     8800
+t6  (x31) =        5
+pc = 1b6a8
+num-instr = 94200746
+
+
+```
 
 
 ## V. Discussion and Conclusion
