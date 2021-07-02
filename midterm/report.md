@@ -1,7 +1,6 @@
 
-
-
 # Midterm : Sharpen filter with Stratus HLS
+## Shaswat (309591029)
 
 ## I. Introduction
 For my mid-term project I implemented another image processing algorithm, the sharpen filter. I first implemented the sharpen filter in SystemC and then to synthesize the kernel function of the sharpen filter and then used  Stratus HLS to annotate the timing back to the platform. Stratus High level Design automates the design and verification flow of hundreds of blocks from transaction-level models (TLMs) to gates. Here we are dealing with a sharpen filter. To sharpen the image add the original image, and the image after the edge detection to each other, and the result will be a new image where the edges are enhanced, making it look sharper. Adding those two images is done by taking the edge detection filter and incrementing the center value of it with 1. Now the sum of the filter elements is 1 and the result will be an image with the same brightness as the original, but sharper.
@@ -107,27 +106,14 @@ HLS_CONSTRAIN_LATENCY(0, 2, "lat01");
 
 |original input | blurred output|
 |---------------|---------------|
-|![i](lena_std_short.bmp)|![o](out.bmp)|
+|![i](lena_std_short.bmp)|![o](out.png)|
 
-### 1. Splitted
+### Comparitive Study
 
-#### Area
-
-| BASIC     | DPA  |
-| ------- | ----- | 
-| 2352.1 | 2108.2 | 
-
-
-### 2. Non-Splitted
-
-#### Area
-
-| BASIC     | DPA  |
-| ------- | ----- | 
-| 2873.7 | 2509.2 | 
+![1](table.png)
 
 
 
 ## V. Discussion and Conclusion
-In this homework I learnt the use of stratus high level sysnthesis. We experiment with diffrent kinds of simulations like sim_B, sim_V_BASIC and sim_V_DPA. The TAs sample code has been very helpful in writing the stratus codes. This was the first time we did Hardware level synthesis which was quite helpful.  
+In this project I learnt the use of a different image processing filter, i.e, the sharpen filter with stratus high level sysnthesis and performing different optimisation techniques. This complete building of a different filter in Hardware level synthesis which was quite helpful.  
 
